@@ -4,8 +4,8 @@ public class Modak extends Sweet {
 	
 	public Modak() {
 		  name = "Modak";
-	        category = Category.MILK;
-	        color = Color.RED;
+	      category = Category.MILK;
+	      color = Color.RED;
 	    }
 	
 }

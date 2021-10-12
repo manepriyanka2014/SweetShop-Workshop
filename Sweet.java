@@ -1,5 +1,7 @@
 package com.bridglabz.sweetshop;
 
+import java.util.Objects;
+
 public class Sweet {
 
 	enum Color {
@@ -21,4 +23,20 @@ public class Sweet {
 		return "Sweet [color=" + color + "," + " id=" + id + ", price=" + price + "," + " name=" + name + "]";
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Sweet sweet = (Sweet) obj;
+		return id.equals(sweet.id);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
 }

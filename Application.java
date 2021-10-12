@@ -1,7 +1,7 @@
 package com.bridglabz.sweetshop;
-import java.util.ArrayList;
-import java.util.List;
-
+//import java.util.ArrayList;
+import java.util.Set;
+//import java.util.List;
 public class Application {
 
 	public static void main(String args[]) {
@@ -21,20 +21,31 @@ public class Application {
 		Jalebi jalebi = new Jalebi();
 		jalebi.id = "J001";
 		jalebi.price = 10;
+		Jalebi jalebi1 = new Jalebi();
+		jalebi1.id = "J1001";
+		jalebi1.price = 110;
 		
 		SweetRepository sweetRepository = new SweetRepository();
 		sweetRepository.add(modak);
-		sweetRepository.add(shrikhand);
+		sweetRepository.add(modak);
 		sweetRepository.add(rasmalai);
 		sweetRepository.add(laddu);
 		sweetRepository.add(jalebi);
+		sweetRepository.add(jalebi1);
 		
-		List sweetList = sweetRepository.getSweetList();
+		UserInterface userintrface = new UserInterface();
+		//List sweetList = sweetRepository.getSweetList();
+		Set sweetList = sweetRepository.getSweetList();
+		userintrface.print(sweetList);
 		
-		UserInterface ui = new UserInterface();
-		ui.print(sweetRepository.getSweetList());
-		  
-
+		sweetRepository.remove(jalebi);
+		sweetRepository.remove(modak);
+		sweetRepository.remove(rasmalai);
+		
+		System.out.println("");
+		System.out.println("After Delition Sweet List :");
+		userintrface.print(sweetList);
+		
 	}
 
 }
