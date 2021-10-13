@@ -1,5 +1,5 @@
 package com.bridglabz.sweetshop;
-public class Rasmalai extends Sweet{
+public class Rasmalai extends Sweet implements INormal{
 
 	public Rasmalai() {
 		name = "Rasmalai";

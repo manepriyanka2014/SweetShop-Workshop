@@ -1,8 +1,7 @@
 package com.bridglabz.sweetshop;
-
 import java.util.Objects;
 
-public class Sweet {
+public abstract class Sweet {
 
 	enum Color {
 		RED, GREEN, WHITE, GREEN_WHITE; // constant
